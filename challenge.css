@@ -1,0 +1,120 @@
+H1,
+H2,
+H3,
+h4,
+H5,
+h6,
+body {
+  margin: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 100vh;
+  font-family: Arial;
+  background-color: rgb(237, 237, 237);
+}
+
+img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: 
+    'lapped lapped lapped'
+    '. card .'
+  ;
+  gap: -2rem;
+
+  height: 40rem;
+  width: 30rem;
+  background-color: rgb(243, 243, 243);
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+.wrapper div {
+  border-radius: inherit;
+}
+
+.overlapped-wrapper {
+  padding: 4rem 1.75rem 4rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background: linear-gradient(135deg, rgb(102, 102, 255),rgb(130, 86, 250),rgb(182, 105, 255), rgb(254, 138, 239));
+  color: white;
+  letter-spacing: 1.25px;
+  grid-area: lapped;
+}
+
+.overlapped-wrapper h2 {
+  font-size: 1.35rem;
+  padding: 0.5rem;
+}
+
+.overlapped-wrapper h4 {
+  font-weight: 500;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding-inline: 6rem;
+  padding-block: 4rem;
+  grid-area: card;
+  background:rgb(255, 255, 255);
+  color: rgb(48, 48, 48);
+  margin-top: -4rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(118, 118, 118, 0.4);
+}
+
+.status p {
+  margin: 0;
+}
+
+.color {
+  background: rgb(0, 172, 0);
+  aspect-ratio: 1;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.send-message {
+  padding-block: 1rem;
+  padding-inline: 1.75rem;
+  border-radius: 0.35rem;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  background: linear-gradient(135deg, rgb(102, 102, 255),rgb(154, 57, 251), rgb(255, 137, 239));
+  transition: background-position 0.15s ease-in-out
+  ;
+  background-size: 150%;
+}
+
+.send-message:hover {
+  background-position: right;
+  cursor: pointer;
+}
+
+.send-message p {
+  margin: 0;
+}
