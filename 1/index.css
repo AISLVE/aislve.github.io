@@ -7,7 +7,7 @@ body {
   'two'
   ;
   align-items: start;
-  gap: 6rem;
+  gap: 4rem;
   justify-content: center;
   font-family: Arial;
   position: relative;
@@ -52,7 +52,7 @@ body {
   position: absolute;
   inset: -0.5rem;
   z-index: -1;
-  filter: blur(5rem);
+  filter: blur(2rem);
 }
 .wrapper::before {
   background-color: rgb(216, 26, 26);
