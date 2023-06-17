@@ -111,7 +111,7 @@ img {
   background: linear-gradient(135deg, rgb(102, 102, 255),rgb(154, 57, 251), rgb(255, 137, 239));
   transition: background-position 0.15s ease-in-out
   ;
-  background-size: 150%;
+  background-size: 200%;
 }
 
 .send-message:hover {
