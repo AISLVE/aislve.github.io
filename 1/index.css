@@ -52,7 +52,7 @@ body {
   position: absolute;
   inset: -0.5rem;
   z-index: -1;
-  filter: blur(2rem);
+  filter: blur(1.5rem);
 }
 .wrapper::before {
   background-color: rgb(216, 26, 26);
