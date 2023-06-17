@@ -1,4 +1,4 @@
-const outputElement = document.getElementById("count");
+let outputElement = document.getElementById("count");
 let count = 0;
 
 function  addCount() {
