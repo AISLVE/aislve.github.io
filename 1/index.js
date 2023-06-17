@@ -21,12 +21,6 @@ function  addCount() {
   totalPeopleEntered()
   count++;
   outputElement.innerHTML = `${count}`;
-  wrapper.classList.add("wrapper-green")
-  wrapper1.classList.add("wrapper-green")
-  if (wrapper.classList[1] === "wrapper") {
-    wrapper.classList.remove("wrapper")
-    wrapper1.classList.remove("wrapper")
-  }
   enteredElement.innerHTML = `Entered: ${entered}`
   console.log(entered)
 }
@@ -35,12 +29,6 @@ function removeCount() {
     count = count ;
   } else {
     count--;
-    wrapper.classList.add("wrapper")
-    wrapper1.classList.add("wrapper")
-    if (wrapper.classList[1] === "wrapper-green") {
-    wrapper.classList.remove("wrapper-green")
-    wrapper1.classList.remove("wrapper-green")
-    }
     totalPeopleLeft()
     leftElement.innerHTML = `Left: ${left}`;
   } 

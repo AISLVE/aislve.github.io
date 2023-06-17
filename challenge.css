@@ -74,8 +74,8 @@ img {
   align-items: center;
   gap: 1rem;
 
-  padding-inline: 4rem;
-  padding-block: 1rem;
+  padding-inline: 3.65rem;
+  padding-block: 1.5rem;
   grid-area: card;
   background:rgb(255, 255, 255);
   color: rgb(48, 48, 48);
@@ -103,13 +103,13 @@ img {
 
 .send-message {
   padding-block: 1rem;
-  padding-inline: 1.75rem;
+  padding-inline: 1rem;
   border-radius: 0.35rem;
   border: 0;
   color: white;
   font-size: 1rem;
   background: linear-gradient(135deg, rgb(102, 102, 255),rgb(154, 57, 251), rgb(255, 137, 239));
-  transition: background-position 0.15s ease-in-out
+  transition: background-position 0.3s ease-in-out
   ;
   background-size: 200%;
 }
@@ -121,4 +121,26 @@ img {
 
 .send-message p {
   margin: 0;
+}
+.next-container {
+  position: absolute;
+  inset: 1rem 1rem auto auto;
+  font-size: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+.next-button {
+  height: 4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.next-button:hover {
+  cursor: pointer;
+  color: white;
+  border: 0;
+  background: black;
 }
