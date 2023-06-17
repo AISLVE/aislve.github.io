@@ -34,7 +34,7 @@ body {
   position: relative;
   text-align: center;
   padding: 1rem;
-  width: clamp(10rem, 20vw + 1rem, 25rem);
+  width: clamp(14rem, 20vw + 2rem, 25rem);
   background-image: url(station.jpg);
   background-position: center;
   display: flex;
@@ -129,31 +129,4 @@ button {
 }
 .green-color {
   color: green !important
-}
-.total-wrapper-green,
-.total-wrapper {
-  position: relative;
-  text-align: center;
-  background-color: rgb(230, 230, 230);
-  border: 0.5rem solid rgb(255, 255, 255);
-  border-radius: 1rem;
-  grid-area: two;
-  min-width: 13ch;
-  width: clamp(10rem, 20vw + 1rem, 25rem);
-  padding: 1rem;
-}
-.total-wrapper-green::after,
-.total-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: -1rem;
-  z-index: -1;
-  border-radius: inherit;
-  filter: blur(3rem);
-}
-.total-wrapper-green::after {
-  background: rgb(255, 0, 0);
-}
-.total-wrapper::after {
-  background: green;
 }
