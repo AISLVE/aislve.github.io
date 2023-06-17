@@ -2,12 +2,17 @@ body {
   margin: 0;
   background: aliceblue;
   display: grid;
-  align-items: center;
+  grid-template-areas:
+  'one '
+  'two'
+  ;
+  align-items: start;
   gap: 4rem;
   justify-content: center;
-  min-height: 100vh;
   font-family: Arial;
   position: relative;
+  min-height: 100vh;
+  padding-top: 20vh;
 }
 .heading {
   font-size: 4rem;
@@ -15,12 +20,24 @@ body {
   background-clip: text;
   color: transparent;
 }
+@media(min-width: 60rem) {
+  body {
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+    'one two'
+    'one .'
+    ; 
+  }
+  button {
+    width: 
+  }
+}
 .wrapper-green,
 .wrapper {
   position: relative;
   text-align: center;
   padding: 1rem;
-  width: 25rem;
+  width: clamp(10rem, 20vw + 1rem, 25rem);
   aspect-ratio: 3 / 4;
   background-image: url(station.jpg);
   background-position: center;
@@ -31,12 +48,13 @@ body {
   border: 0.4rem solid rgb(255, 255, 255);
   border-radius: 1rem;
   color: rgb(61, 61, 61);
+  grid-area: one;
 }
 .wrapper-green::before,
 .wrapper::before {
   content: '';
   position: absolute;
-  inset: -1rem;
+  inset: -0.5rem;
   bottom: 45%;
   z-index: -1;
   border-top-left-radius: inherit;
@@ -53,9 +71,9 @@ body {
 .wrapper::after {
   content: '';
   position: absolute;
-  inset: -1rem;
+  inset: -0.5rem;
   top: 45%;
-  background-color: rgb(0, 0, 0);
+  background-color: green;
   border-radius: inherit;
   z-index: -1;
   filter: blur(5rem);
@@ -63,11 +81,11 @@ body {
 .green,
 .red,
 .count {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .count {
-  color: rgb(64, 68, 196);
+  color: rgb(78, 78, 78);
 }
 .red {
   color: rgb(255, 0, 0);
@@ -84,9 +102,8 @@ button {
 .decrement-button {
   text-align: center;
   padding: 0.5rem;
-  padding-inline: 6rem;
+  padding-inline: 2rem;
   border: 0;
-  height: 4rem;
   border-radius: 0.5rem;
   background-color: green;
   color: white;
@@ -106,14 +123,14 @@ button {
 }
 .secondary {
   position: absolute;
-  inset: 4rem 0 0 0;
+  inset: 3rem 0 0 0;
   margin: auto;
   transition: all 0.1s ease-in-out;
 }
 .increment-button:hover .secondary,
 .decrement-button:hover .secondary {
   position: absolute;
-  inset: 1.25rem 0 0 0;
+  inset: 9px 0 0 0;
   margin: auto;
 }
 .increment-button:hover .primary,
@@ -130,4 +147,25 @@ button {
 }
 .green-color {
   color: green !important
+}
+.total-wrapper {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(230, 230, 230);
+  border: 0.5rem solid rgb(255, 255, 255);
+  border-radius: 1rem;
+  grid-area: two;
+  min-width: 13ch;
+  width: clamp(10rem, 20vw + 1rem, 25rem);
+  padding: 1rem;
+}
+.total-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -1rem;
+  background: linear-gradient(-45deg, rgb(216, 26, 26), rgb(38, 229, 38));
+  z-index: -1;
+  border-radius: inherit;
+  filter: blur(3rem);
 }
