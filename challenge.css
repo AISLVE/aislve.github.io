@@ -7,6 +7,10 @@ h6,
 body {
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 body {
   display: grid;
   place-items: center;
@@ -32,8 +36,8 @@ img {
   ;
   gap: -2rem;
 
-  height: 40rem;
-  width: 30rem;
+  height: 30rem;
+  width: 25rem;
   background-color: rgb(243, 243, 243);
   padding: 4rem;
   border-radius: 1rem;
@@ -44,7 +48,7 @@ img {
 }
 
 .overlapped-wrapper {
-  padding: 4rem 1.75rem 4rem 1.75rem;
+  padding: 4rem 1.75rem 6rem 1.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,8 +74,8 @@ img {
   align-items: center;
   gap: 1rem;
 
-  padding-inline: 6rem;
-  padding-block: 4rem;
+  padding-inline: 4rem;
+  padding-block: 1rem;
   grid-area: card;
   background:rgb(255, 255, 255);
   color: rgb(48, 48, 48);
