@@ -13,9 +13,10 @@ a {
 }
 body {
   display: grid;
+  gap: 4rem;
+  padding: 2rem;
   place-items: center;
-  text-align: center;
-  min-height: 100vh;
+  text-align: end;
   font-family: Arial;
   background-color: rgb(237, 237, 237);
 }
@@ -34,12 +35,11 @@ img {
     'lapped lapped lapped'
     '. card .'
   ;
-  gap: -2rem;
 
   height: 30rem;
   width: 25rem;
   background-color: rgb(243, 243, 243);
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 1rem;
 }
 
@@ -73,6 +73,7 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
 
   padding-inline: 3.65rem;
   padding-block: 1.5rem;
@@ -122,17 +123,22 @@ img {
 .send-message p {
   margin: 0;
 }
-.next-container {
-  position: absolute;
-  inset: 1rem 1rem auto auto;
-  font-size: 2rem;
+.next-wrapper {
+  position: relative;
+  inset: 0 0 auto auto;
+  font-size: 1rem;
   display: flex;
-  gap: 2rem;
   flex-direction: row;
+  gap: 1rem;
   align-items: center;
+  justify-content: center;
+}
+.next-wrapper p {
+  font-size: 2rem;
+  margin: 0;
 }
 .next-button {
-  height: 4rem;
+  height: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;
   font-size: 2rem;

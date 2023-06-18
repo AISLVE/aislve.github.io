@@ -7,7 +7,7 @@ body {
   'two'
   ;
   align-items: start;
-  gap: 4rem;
+  gap: 3rem;
   justify-content: center;
   font-family: Arial;
   position: relative;
@@ -15,11 +15,11 @@ body {
   padding-top: 20vh;
 }
 .heading {
-  position: absolute;
-  inset: 2rem 0 auto 0;
-  font-size: 4rem;
+  position: fixed;
+  inset: 0 ;
+  margin: 0;
+  font-size: 3.25rem;
   text-align: center;
-  margin-block: 0;
   text-decoration: underline;
 }
 @media(min-width: 60rem) {
@@ -35,7 +35,7 @@ body {
   position: relative;
   text-align: center;
   padding: 1rem;
-  width: clamp(14rem, 20vw + 2rem, 25rem);
+  width: clamp(15rem, 20vw + 2rem, 25rem);
   background-image: url(station.jpg);
   background-position: center;
   display: flex;
@@ -126,4 +126,31 @@ button {
 }
 .green-color {
   color: green !important
+}
+.next-wrapper {
+  position: relative;
+  inset: 0 0 auto auto;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.next-wrapper p {
+  font-size: 2rem;
+  margin: 0;
+}
+.next-button {
+  height: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.next-button:hover {
+  cursor: pointer;
+  color: white;
+  border: 0;
+  background: black;
 }
