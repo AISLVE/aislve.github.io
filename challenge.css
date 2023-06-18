@@ -15,7 +15,7 @@ body {
   display: grid;
   gap: 4rem;  
   place-items: center;
-  min-width: 100vw;
+  max-width: 100vw;
   text-align: end;
   font-family: Arial;
   background-color: rgb(237, 237, 237);
