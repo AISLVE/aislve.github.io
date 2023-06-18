@@ -13,9 +13,9 @@ a {
 }
 body {
   display: grid;
-  gap: 4rem;
-  padding: 2rem;
+  gap: 4rem;  
   place-items: center;
+  min-width: 100vw;
   text-align: end;
   font-family: Arial;
   background-color: rgb(237, 237, 237);
@@ -39,7 +39,6 @@ img {
   height: 30rem;
   width: 25rem;
   background-color: rgb(243, 243, 243);
-  padding: 3rem;
   border-radius: 1rem;
 }
 

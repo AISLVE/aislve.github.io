@@ -127,21 +127,6 @@ button {
 .green-color {
   color: green !important
 }
-.next-wrapper {
-  position: absolute;
-  inset: 4rem 0 auto 0;
-  margin: auto;
-  height: 3rem;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.next-wrapper p {
-  font-size: 2rem;
-  margin: 0;
-}
 .next-button {
   height: 3rem;
   aspect-ratio: 1;
@@ -152,7 +137,7 @@ button {
 }
 .next-button:hover {
   cursor: pointer;
-  color: white;
+  color: rgb(222, 222, 222);
   border: 0;
   background: black;
 }
