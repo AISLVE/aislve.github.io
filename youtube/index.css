@@ -27,6 +27,7 @@ body {
   font-family: Roboto;
   padding: 6rem 1rem 1rem 6rem;
   background-color: var(--pale-white);
+  color-scheme: 'light dark';
 }
 img {
   max-width: 100%;
@@ -51,7 +52,7 @@ img {
   display: flex;
   align-items: center;
   padding: 0rem 0.75rem;
-  gap: clamp(0.5rem, 2vw + 0.125rem, 1.5rem);
+  gap: clamp(0.5rem, 1vw + 0.125rem, 1.5rem);
 }
 
 .hamburger-menu {
@@ -255,7 +256,7 @@ img {
 .thumbnail {
   height: 105%;
   border-radius: 0.25rem;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .video-wrapper:hover .thumbnail {
