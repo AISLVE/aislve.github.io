@@ -127,17 +127,3 @@ button {
 .green-color {
   color: green !important
 }
-.next-button {
-  height: 3rem;
-  aspect-ratio: 1;
-  margin: 0;
-  border-radius: 50%;
-  font-size: 2rem;
-  transition: all 0.3s ease-in-out;
-}
-.next-button:hover {
-  cursor: pointer;
-  color: rgb(222, 222, 222);
-  border: 0;
-  background: black;
-}
