@@ -27,7 +27,6 @@ body {
   font-family: Roboto;
   padding: 6rem 1rem 1rem 6rem;
   background-color: var(--pale-white);
-  color-scheme: 'light dark';
 }
 img {
   max-width: 100%;
