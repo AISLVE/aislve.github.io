@@ -35,8 +35,8 @@ img {
     'lapped lapped lapped'
     '. card .'
   ;
-
-  height: 30rem;
+  height: min-content;
+  padding: 1rem;
   width: 25rem;
   background-color: rgb(243, 243, 243);
   border-radius: 1rem;
@@ -124,7 +124,7 @@ img {
 }
 .next-wrapper {
   position: relative;
-  inset: 0 0 auto auto;
+  inset: 1rem 0 auto auto;
   font-size: 1rem;
   display: flex;
   flex-direction: row;
