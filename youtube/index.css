@@ -51,7 +51,7 @@ img {
   display: flex;
   align-items: center;
   padding: 0rem 0.75rem;
-  gap: 2rem;
+  gap: clamp(0.5rem, 2vw + 0.125rem, 1.5rem);
 }
 
 .hamburger-menu {
@@ -63,7 +63,7 @@ img {
 }
 
 .left-section img {
-  height: 1.5rem;
+  height: clamp(0.5rem, 2vw + 0.25rem, 1.5rem);
 }
 
 .middle-section {
@@ -113,7 +113,7 @@ img {
 
 .right-section {
   display: flex;
-  gap: 1rem;
+  gap: 1vw;
 }
 
 .right-section img {
@@ -128,6 +128,21 @@ img {
 .right-section img:hover {
   cursor: pointer;
   background-color: #f8f8f8;
+}
+
+@media(max-width: 31rem) {
+  .right-section img {
+    display: none;
+  }
+  .search-bar {
+    min-width: 10vw;
+  }
+  .profile-picture {
+    display: inline-block;
+  }
+  .header {
+    padding-right: 0;
+  }
 }
 
 .wrapper {
