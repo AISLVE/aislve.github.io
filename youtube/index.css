@@ -131,7 +131,13 @@ img {
   background-color: #f8f8f8;
 }
 
-@media(max-width: 31rem) {
+@media(max-width: 30rem) {
+  .header {
+    gap: 1rem;
+  }
+  .left-section {
+    padding: 0;
+  }
   .right-section img {
     display: none;
   }
@@ -150,7 +156,12 @@ img {
     padding-right: 0;
   }
   .search-button {
-    min-width: 4rem;
+    width: 10vw;
+    aspect-ratio: 1;
+  }
+  .voice-search {
+    height: 2rem;
+    aspect-ratio: 1;
   }
   .hamburger-menu {
     width: 1.25rem;
