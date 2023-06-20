@@ -136,13 +136,16 @@ img {
     display: none;
   }
   .search-bar {
-    min-width: 10vw;
+    min-width: 20vw;
   }
   .profile-picture {
     display: inline-block;
   }
   .header {
     padding-right: 0;
+  }
+  .search-button {
+    min-width: 4rem;
   }
 }
 
