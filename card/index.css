@@ -91,16 +91,13 @@ body {
   background-color: hsl(157, 31%, 28%);
 }
 @media(max-width: 66.25rem) {
-  body {
-    padding: 4rem;
-  }
   .wrapper {
     grid-template-areas: 
     'image'
     'description'
     ;
     min-height: 40rem;
-    min-width: clamp(10rem, 30vw, 25rem);
+    min-width: clamp(20rem, 30vw, 25rem);
     gap: 0;
   }
   .description {
