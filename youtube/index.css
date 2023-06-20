@@ -135,6 +135,11 @@ img {
   .right-section img {
     display: none;
   }
+  .middle-section {
+    flex: 1;
+    max-width: initial;
+    justify-items: start;
+  }
   .search-bar {
     min-width: 20vw;
   }
@@ -146,6 +151,9 @@ img {
   }
   .search-button {
     min-width: 4rem;
+  }
+  .hamburger-menu {
+    width: 1.25rem;
   }
 }
 
