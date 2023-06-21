@@ -99,7 +99,7 @@ body {
   justify-content: center;
   padding: 2rem 3rem 4rem 3rem;
   background-color: var(--bg-blue);
-  border-radius: inherit;
+  border-radius: 2rem;
   text-align: center;
   color: var(--fc-white)
 }
@@ -198,5 +198,8 @@ body {
     'score-summary'
     ;
     border-radius: 0;
+  }
+  .score {
+    border-radius: 0 0 2rem 2rem;
   }
 }
