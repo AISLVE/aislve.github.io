@@ -192,7 +192,7 @@ button:hover {
   ;
 }
 
-@media(max-width: 55rem) {
+@media(max-width: 45rem) {
   .wrapper {
     position: relative;
     grid-template-areas: 
@@ -253,6 +253,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 100%;
   width: 100%;
   background-color: var(--bg-secondary);
