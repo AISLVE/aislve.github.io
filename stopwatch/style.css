@@ -1,0 +1,283 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+div {
+  border-radius: 4rem;
+}
+
+:root {
+  --bg-primary: #0f241a;
+  --bg-secondary: #26372f;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-color: #263b30;
+  
+  min-height: 100dvh;
+
+  font-family: Poppins;
+}
+
+img {
+  max-width: 100%;
+  height: 4rem;
+  aspect-ratio: 1;
+}
+
+button {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(56, 175, 114);
+  height: 6rem;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  transition: all 0.3;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1) ;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(206, 206, 206);
+  text-decoration: underline;
+  padding: 1.5rem 4.5rem 0rem 4rem;
+}
+
+.resume-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url(images/resume.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+}
+
+.pause-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url(images/pause.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+}
+
+.reset-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url(images/reset.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.main-wrapper {
+  background-color: var(--bg-primary);
+  width: clamp(20rem, 80vw, 80rem);
+  box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.6);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 4rem;
+}
+
+.time-container {
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: clamp(0.25rem, 0.5vw, 1rem) solid rgba(208, 208, 208, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopwatch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.collective {
+  display: flex;
+  flex-direction: row;
+}
+
+.colon {
+  transform: translateY(-6px);
+  padding-inline: 1rem;
+}
+
+.seconds,
+.minutes,
+.hours,
+.colon {
+  font-size: clamp(2rem, 4.5vw, 6rem);
+  line-height: clamp(2rem, 4.5vw, 6rem);
+  color: white;
+}
+
+.milli-seconds {
+  font-size: clamp(1rem, 3.5vw,3rem);
+  line-height: clamp(1rem, 3.5vw, 3rem);
+  color: white;
+}
+
+
+.blinking {
+  animation: blinking 1s infinite;
+}
+
+.pause-button {
+  padding-inline: 6vw; border-radius: 2rem;
+}
+
+@keyframes button {
+  0% {padding: 0; border-radius: 50%;}
+  100% {padding-inline: 6vw; border-radius: 2rem;}
+}
+
+@keyframes retract { 
+  0% {padding-inline: 6vw; border-radius: 2rem;}
+  100% {padding-inline: 0; border-radius: 50%;}
+}
+
+@keyframes blinking {
+  0% {opacity: 0}
+  100% {opacity: 1;}
+}
+
+.wrapper {
+  display: grid;
+  grid-auto-columns: 1fr;
+  border-radius: 4rem;
+  overflow: hidden;
+  grid-template-areas: 
+  'time lap'
+  ;
+}
+
+@media(max-width: 55rem) {
+  .wrapper {
+    position: relative;
+    grid-template-areas: 
+    'time'
+    'lap'
+    ;
+  }
+  .laps-container {
+    padding-block: 3rem;
+    border-radius: 2rem;;
+  }
+  .main-wrapper {
+    background-color: var(--bg-primary);
+    width: 100vw;
+    box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.6);
+  }
+  .seconds,
+  .minutes,
+  .hours,
+  .colon {
+    font-size: clamp(4rem, 10vw, 6rem);
+    line-height: clamp(4rem, 10vw, 6rem);
+  }
+  .button {
+    position: absolute; 
+  }
+  .reset-button {
+    position: absolute;
+    inset: auto auto 2.5rem 10vw;
+  }
+  .resume-button {
+    inset: auto auto 1rem calc(50vw - clamp(4rem, 8vw, 7.5rem)/2);
+  }
+  .pause-button {
+    inset: auto auto 1rem calc(50vw - clamp(4rem, 8vw, 7.5rem)/2);
+  }
+  .main {
+    height: clamp(6rem, 8vw, 7.5rem);
+  }
+}
+
+.time-wrapper {
+  background-color: var(--bg-primary);
+}
+
+.laps-wrapper {
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-primary);
+}
+
+.laps-wrapper h1 {
+  font-size: 2rem;
+  color: rgb(187, 187, 187);
+  font-size: 600;
+}
+
+.laps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-secondary);
+}
+
+.main { /* for buttons */
+  height: clamp(4rem, 8vw, 7.5rem);
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  height: 7.5rem;
+  min-width: 100%;
+  align-items: center;
+}
+
+.resume-button,
+.pause-button {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.reset-button {
+  justify-self: start;
+  height: clamp(3rem, 6vw, 6rem);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-wrapper" style="position: relative;">
+    <h1 class="title">Stopwatch</h1>
+    <div class="wrapper">
+      <div class="time-wrapper container">
+        <div class="time-container">
+          <div id="stopwatch" class="stopwatch">
+            <div class="collective">
+              <div id="hours" class="hours"></div>
+              <div id ="colon1" class="colon"></div>
+              <div id="minutes" class="minutes"></div>
+              <div id ="colon2" class="colon"></div>
+              <div id="seconds" class="seconds">00</div>
+            </div>
+            <span id="milli-seconds" class="milli-seconds">00</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="reset-button" id="reset"></button>
+          <button class="resume-button main" id="resume"></button>
+          <button class="pause-button main" id="pause"></button>
+        </div>
+      </div>
+      <div class="laps-wrapper">
+        <div class="laps-container" id="lapsContainer"></div>
+      </div>
+    </div>
+  </div>
+<script defer src="index.js"></script>
+</body>
+</html>
