@@ -207,6 +207,7 @@ button:hover {
   .main-wrapper {
     background-color: var(--bg-primary);
     width: 100vw;
+    min-height: 100dvh;
     box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.6);
   }
   .seconds,
