@@ -120,6 +120,7 @@ function updateTime() {
   } else {
     milliSecondsElement.innerHTML = `${ms}`;
   }
+  changeButton();
 }
 
 function reset() {
@@ -131,7 +132,7 @@ function reset() {
   blink = true;
   colon1.innerHTML = ``;
   colon2.innerHTML = ``;
-  lapsElement.innerHTML = ``;
+  lapsElement.innerHTML = `<h1>No Laps.</h1>`;
   blinking('noBlink')
   updateTime();
   changeButton();
@@ -183,34 +184,29 @@ function addLap() {
   laps.forEach(() => {
     if(hoursElement.innerHTML === '' && minutesElement.innerHTML === '' && secondsElement.innerHTML === '00' && milliSecondsElement.innerHTML === '00') {
       html = '<h1 style = "font-size: 6rem;">😶</h1>'
-      console.log('one')
     } else if(time.hours === '' && time.min >= 1) {
       html = `<h1>Lap => ${time.min} : ${time.sec} : ${time.ms}</h1>`;
-      console.log('one')
     } else if(time.hours === '' && time.min === '') {
        html = `<h1>Lap => ${time.sec} : ${time.ms}</h1>`;
-       console.log('one')
     } 
 
     if(lapsElement.innerHTML === `<h1>No Laps.</h1>`) {
       html = ``;
       if(hoursElement.innerHTML === '' === '' && timeElement.innerHTML === '00' && milliSecondsElement.innerHTML === '00') {
-        html = '<h1>Just what are you trying to do 😮‍💨</h1>'
-        console.log('one')
+        html = '<h1>😶</h1>'
       } else if(time.hours === '' && time.min >= 1) {
           html = `<h1>Lap => ${time.min} : ${time.sec} : ${time.ms}</h1>`;
-          console.log('one')
       } else if(time.hours === '' && time.min === '' && lapsElement.innerHTML !== `<h1>No Laps.</h1>`) {
           html = `<h1>Lap => ${time.sec} : ${time.ms}</h1>`;
-          console.log('one')
       } 
     } 
   })
   htmlCode += html;
   renderLap();
+  changeButton();
 }
 
-function clearLap  () {
+function clearLap() {
   html = ``;
   htmlCode = html;
 }

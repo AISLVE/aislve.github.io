@@ -57,39 +57,6 @@ button {
   text-decoration: underline;
 }
 
-.resume-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: url(images/resume.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 35%;
-}
-
-.pause-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: url(images/pause.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20%;
-}
-
-.reset-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: url(images/reset.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30%;
-}
-
 button:hover {
   cursor: pointer;
 }
