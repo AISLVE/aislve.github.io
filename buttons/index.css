@@ -5,7 +5,6 @@ body {
   justify-content: center;
   overflow: scroll;
   text-align: center;
-  padding: 10rem;
   color-scheme: dark light;
   background: linear-gradient(315deg, hsl(170, 50%, 50%),hsl(270, 50%, 50%));
 }
