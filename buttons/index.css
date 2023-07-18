@@ -194,49 +194,48 @@ p {
   position: absolute;
   inset: 0;
   margin: auto;
-  height: 10rem;
+  height: 15rem;
   aspect-ratio: 3 / 2;
-  border-radius: 10rem;
+  border-radius: 15rem;
   z-index: -1;
-  filter: blur(2rem);
+  filter: blur(5rem);
 }
 
 .red {
-  background-color: hsl(16, 100%, 69%);
-  transform: translate(10rem, 20rem);
-  animation: red-blob 20s linear infinite;
+  background-color: hsl(16, 100%, 61%);
+  animation: red-blob 25s linear infinite;
+  transform: translate(13rem, 0);
 }
 
 .blue {
-  background-color: hsl(195, 100%, 65%);
-  animation: blue-blob 20s linear infinite;
+  background-color: hsl(195, 98%, 53%);
+  animation: blue-blob 25s linear infinite;
+  transform: translate(18rem, 0);
 }
 
 .green {
-  background-color: hsl(140, 97%, 61%);
-  animation: green-blob 20s linear infinite;
+  background-color: hsl(140, 93%, 55%);
+  animation: green-blob 10s linear infinite;
+  transform: translate(-10rem, 0);
 }
 
 @keyframes red-blob {
-  0% {transform: translate(8rem, 18rem);}
-  25% {transform: translate(13rem, -8rem);}
-  50% {transform: translate(-8rem, 8rem);}
-  75% {transform: translate(3rem, 8rem);}
-  100% {transform: translate(8rem, 18rem);}
+  0% {transform: translate(13rem, 0);}
+  25% {transform: translate(0rem, 15rem);}
+  50% {transform: translate(-15rem, 0);}
+  75% {transform: translate(0, -15rem);}
+  100% {transform: translate(13rem 0);}
 }
 
 @keyframes blue-blob {
-  0% {transform: translate(-15rem, -25rem);}
-  25% {transform: translate(-20rem, 15rem);}
-  50% {transform: translate(15rem, -15rem);}
-  75% {transform: translate(-10rem, -15rem);}
-  100% {transform: translate(-15rem, -25rem);}
+  0% {transform: translate(18rem, 0);}
+  25% {transform: translate(0rem, -18rem);}
+  50% {transform: translate(18rem, 0);}
+  75% {transform: translate(0rem, 18rem);}
+  100% {transform: translate(18rem 0);}
 }
 
 @keyframes green-blob {
-  0% {transform: translate(-5rem, -10rem);}
-  25% {transform: translate(-7.5rem, 5rem);}
-  50% {transform: translate(5rem, -5rem);}
-  75% {transform: translate(-2.5rem, -5rem);}
-  100% {transform: translate(-5rem, -10rem);}
+  from, to {transform: translate(-10rem, 0);}
+  50% {transform: translate(10rem, 0);}
 }
