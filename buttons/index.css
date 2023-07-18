@@ -18,6 +18,7 @@ h1 {
 }
 
 .wrapper {
+  position: relative;
   justify-self: center;
   display: grid;
   gap: 2rem;
@@ -76,7 +77,7 @@ button {
 }
 
 .two:hover {
-  scale: 1.01;
+  scale: 1.015;
   box-shadow: 0 0 0.75rem 0.25rem rgba(255, 255, 255, 0.25);
 }
 
@@ -185,4 +186,57 @@ p {
 
 .seven:hover span{
   transform: translateY(-4.15rem);
+}
+
+.red,
+.blue,
+.green {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: 10rem;
+  aspect-ratio: 3 / 2;
+  border-radius: 10rem;
+  z-index: -1;
+  filter: blur(2rem);
+}
+
+.red {
+  background-color: hsl(16, 100%, 69%);
+  transform: translate(10rem, 20rem);
+  animation: red-blob 20s linear infinite;
+}
+
+.blue {
+  background-color: hsl(195, 100%, 65%);
+  animation: blue-blob 20s linear infinite;
+}
+
+.green {
+  background-color: hsl(140, 97%, 61%);
+  animation: green-blob 20s linear infinite;
+}
+
+@keyframes red-blob {
+  0% {transform: translate(8rem, 18rem);}
+  25% {transform: translate(13rem, -8rem);}
+  50% {transform: translate(-8rem, 8rem);}
+  75% {transform: translate(3rem, 8rem);}
+  100% {transform: translate(8rem, 18rem);}
+}
+
+@keyframes blue-blob {
+  0% {transform: translate(-15rem, -25rem);}
+  25% {transform: translate(-20rem, 15rem);}
+  50% {transform: translate(15rem, -15rem);}
+  75% {transform: translate(-10rem, -15rem);}
+  100% {transform: translate(-15rem, -25rem);}
+}
+
+@keyframes green-blob {
+  0% {transform: translate(-5rem, -10rem);}
+  25% {transform: translate(-7.5rem, 5rem);}
+  50% {transform: translate(5rem, -5rem);}
+  75% {transform: translate(-2.5rem, -5rem);}
+  100% {transform: translate(-5rem, -10rem);}
 }
