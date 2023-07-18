@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Reset</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>CSS RESET</h1>
+  </header>
+  <main>
+    <div class="wrapper">
+
+      <section>
+        <h1>Adding dark mode</h1>
+        <code>
+          <span><span class="class">html</span> <span class="curly-bracket ">{</span></span>
+          <span class="property"><span class="property-name">color-scheme</span>: dark light; <span class="comment">/* Adds a default dark mode to your website */</span></span>
+          <span class="curly-bracket">}</span>
+        </code>
+      </section>
+
+      <section>
+        <h1>Custom Properties</h1>
+        <code>
+          <span class="class">:root <span class="curly-bracket">{</span></span>
+          <span class="comment margin">
+            /* Your custom properties */
+          </span>
+          <span class="curly-bracket">}</span>
+        </code>
+      </section>
+      
+      <section>
+        <h1>Universal Properties</h1>
+        <code>
+          <span class="class">*, *::after, *::before <span class="curly-bracket">{</span></span>
+          <span class="property"><span class="property-name">box-sizing</span>: border-box;</span>
+          <span class="property"><span class="property-name">margin</span>: <span class="property-value">0</span>;</span>
+          <span class="property"><span class="property-name">padding</span>: <span class="property-value">0</span>;</span>
+          <span class="curly-bracket">}</span>
+        </code>
+      </section>
+      
+      <section>
+        <h1>Reset font size</h1>
+        <code>
+          <span class="class">* <span class="curly-bracket">{</span></span>
+          <span class="property"><span class="property-name">font</span>: inherit;</span>
+          <span class="property"><span class="property-name">font-size</span>: <span class="property-value">100%</span>;</span>
+          <span class="curly-bracket">}</span>
+        </code>
+      </section>
+      
+      <section>
+        <h1>Debugging</h1>
+        <code>
+          <span class="class">*<span class="curly-bracket"> {</span></span>
+          <span class="property"><span class="property-name">background-color</span>: <span class="property-value">hsla(150, 100%, 50%, 0.2)</span>;</span>
+          <span class="curly-bracket">}</span>
+        </code>
+      </section>
+      
+      <section>
+        <h1>Responsive image and videos</h1>
+        <code>
+            <span class="class">img,</span>
+            <span class="class">picture,</span>
+            <span class="class">svg,</span>
+            <span class="class">video <span class="curly-bracket">{</span></span> 
+            <span class="property"><span class="property-name">display</span>: block;</span>
+            <span class="property"><span class="property-name">max-width</span>: <span class="property-value">100%</span>;</span>
+            <span class="curly-bracket">}</span> 
+        </code>
+      </section>
+      
+      <section>
+        <h1>Responsive *images*</h1>
+        <code>
+          <span class="class">img <span class="curly-bracket">{</span></span> 
+          <span class="property"><span class="property-name">object-fit</span>: cover;</span>
+          <span class="curly-bracket">}</span>
+        </code>
+      </section>
+      
+      <section>
+        <h1>Body</h1>
+        <code>
+          <span class="class">body <span class="curly-bracket">{</span></span>
+            <span class="property"><span class="property-name">min-height</span>: <span class="property-value">100dvh, 100vh</span></span>
+            <span class="property"><span class="property-name">font-family</span>: "Poppins", sans-serif</span>
+            <span class="property"><span class="property-name">scroll-behavior</span>: smooth;</span>
+            <span class="curly-bracket">}</span>
+        </code>
+      </section>
+
+      <section>
+        <h1>Buttons Reset</h1>
+        <code>
+          <span class="class">button <span class="curly-bracket">{</span></span>
+            <span class="property"><span class="property-name">cursor</span>: pointer;</span>
+            <span class="property"><span class="property-name">margin</span>: <span class="property-value">0</span>;</span>
+            <span class="property"><span class="property-name">padding</span>: <span class="property-value">0</span>;</span>
+            <span class="property"><span class="property-name">border</span>: <span class="property-value">0</span>;</span>
+            <span class="curly-bracket">}</span>
+          </code>
+      </section>
+
+      <section>
+        <h1>QOL Classes</h1>
+        <code>
+          <span class="element">
+            <span class="class">.grid <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">display</span>: grid; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+          
+          <span class="element">
+            <span class="class">.flex <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">display</span>: flex; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+          
+          <span class="element">
+            <span class="class">.static <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">position</span>: static; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+          
+          <span class="element">
+            <span class="class">.relative <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">position</span>: relative; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+          
+          <span class="element">
+            <span class="class">.absolute <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">position</span>: absolute; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+          
+          <span class="element">
+            <span class="class">.fixed <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">position</span>: fixed; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+
+          <span class="element">
+            <span class="class">.sticky <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">position</span>: sticky; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+
+          <span class="element">
+            <span class="class">.center-items <span class="curly-bracket">{</span> <span class="comment">/* Center element within a grid/flex container */</span></span>
+              <span class="property"><span class="property-name">align-items</span>: center; </span>
+              <span class="property"><span class="property-name">justify-content</span>: center; </span>
+              <span class="curly-bracket">}</span>
+          </span>
+
+          <span class="comment" style="padding-bottom: 0.75rem">/* If you are wondering about what inset is, it is a shorthand for top, bottom, left and right */</span>
+
+          <span class="element">
+            <span class="class">.center-position <span class="curly-bracket">{</span> <span class="comment">/* Center an element having position property */</span></span>
+              <span class="property"><span class="property-name">inset</span>: <span class="property-value">0</span>;</span>
+              <span class="property"><span class="property-name">margin</span>: auto;</span>
+              <span class="curly-bracket">}</span>
+          </span>
+
+          <span class="element">
+            <span class="class">.inset0 <span class="curly-bracket">{</span></span>
+              <span class="property"><span class="property-name">inset</span>: <span class="property-value">0</span>;</span>
+              <span class="curly-bracket">}</span>
+          </span>
+        </code>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

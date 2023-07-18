@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+
+body {
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  aspect-ratio: 1;
+  z-index: -1;
+  filter: blur(3rem);
+  background: rgb(27, 49, 70);
+}
+
+body::before {
+  height: 20rem;
+  border-bottom-left-radius: 100%;
+  inset: 0 0 auto auto;
+}
+
+body::after {
+  border-top-right-radius: 100%;
+  inset: auto auto 0 0;
+  height: 20rem;
+  background: rgb(152, 152, 152);
+}
+
+
+header {
+  background-color: rgba(166, 205, 254, 0.3);
+}
+
+header > h1 {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 700;
+  color: white;
+  -webkit-text-stroke: 8px rgb(48, 80, 111);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: rgb(12, 27, 41);
+  }
+
+  body::before,
+  body::after {
+    background: rgb(204, 204, 204);
+  }
+
+  header {
+    background-color: rgba(106, 173, 255, 0.3);
+  }
+
+  header > h1 {
+    -webkit-text-stroke: 8px rgb(94, 149, 216);
+  }
+
+  section > h1 {
+    color: white;
+  }
+}
+
+h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+section {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: transparent;
+}
+
+.class,
+.curly-bracket,
+.bracket {
+  color: rgb(205, 183, 107);
+}
+
+code,
+.element {
+  background-color: rgb(27, 49, 70);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-radius: 4px;
+}
+
+code {
+  padding: 2rem 1rem;
+  font-weight: 500;
+}
+
+.element {
+  padding-bottom: 1rem;
+}
+
+.property {
+  padding-left: 1em;
+}
+
+.comment {
+  color: hsl(120, 100%, 25%);
+}
+
+.property-name {
+  color: rgb(141, 211, 253);
+}
+
+.property-value {
+  color: rgb(167, 196, 151);
+}
+
+.string {
+  color: rgb(193, 126, 100);
+}
+
+.margin {
+  padding-left: 1em;
+}
+
+.inline-block {
+  display: inline-block;
+}
