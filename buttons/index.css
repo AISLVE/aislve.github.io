@@ -78,7 +78,7 @@ button {
 
 .two:hover {
   scale: 1.015;
-  box-shadow: 0 0 0.75rem 0.25rem rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 1rem 0.5rem rgba(255, 255, 255, 0.25);
 }
 
 .three,.four {
@@ -198,7 +198,7 @@ p {
   aspect-ratio: 3 / 2;
   border-radius: 15rem;
   z-index: -1;
-  filter: blur(5rem);
+  filter: blur(6rem);
 }
 
 .red {
@@ -208,7 +208,7 @@ p {
 }
 
 .blue {
-  background-color: hsl(195, 98%, 53%);
+  background-color: hsl(219, 100%, 50%);
   animation: blue-blob 25s linear infinite;
   transform: translate(18rem, 0);
 }
