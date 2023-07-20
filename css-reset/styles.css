@@ -198,7 +198,7 @@ header > h1 {
   background-color: var(--bg-header);
 }
 
-.mobile-nav-toggle {
+.button {
   --padding: .05rem .25rem;
 
   padding: var(--padding);
@@ -209,6 +209,32 @@ header > h1 {
   border-radius: 4px;
   z-index: 99999;
 }
+
+.copy {
+  --padding: 0.5rem 0.5rem;
+
+  opacity: 1;
+  inset: 0.5rem 0.5rem auto auto;
+}
+
+.copy[data-copied = "true"] .page{
+  display: none;
+}
+
+.copy[data-copied = "false"] .page{
+  display: block;
+}
+
+.copy[data-copied = "true"] .tick{
+  display: block;
+  stroke: var(--bg-header);
+  stroke-width: 2px;
+}
+
+.copy[data-copied = "false"] .tick{
+  display: none;
+}
+
 
 .navbar {
 
@@ -228,6 +254,30 @@ header > h1 {
   transition: 
   transform 0.25s ease-out,
   inset 0.25s ease-out;
+}
+
+@media(min-width: 55rem) {
+  nav > ul > li {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+  }
+  
+  nav  ul li::after {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 -10%;
+    background: white;
+    height: var(--fs-navbar);
+    aspect-ratio: 1;
+    transform: scale(0.5);
+    margin: auto;
+    border-radius: 50%;
+  }
+  
+  nav ul li:hover {
+    transform: translate(1.5rem);
+  }
 }
 
 @media (max-width: 48rem) {

@@ -9,12 +9,17 @@
 </head>
 <body class="relative">
 
-  <button aria-controls="navbar" aria-expanded="false" class="mobile-nav-toggle fixed grid center-items" id="button">
+  <button data-copied="false" aria-details="copy" class="button copy grid fixed center-items" id="copy">
+    <svg class="tick copy-state"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m10 13.6l5.9-5.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-6.6 6.6q-.3.3-.7.3t-.7-.3l-2.6-2.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l1.9 1.9Z"/></svg>
+    <svg class="page copy-state"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V6h2v14h11v2H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>
+  </button>
+
+  <button aria-controls="navbar" aria-expanded="false" class=" button mobile-nav-toggle fixed grid center-items" id="button">
     <span class="sr-only">Menu</span>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6 15h10q.425 0 .713-.288T17 14V8q0-.425-.288-.713T16 7H6q-.425 0-.713.288T5 8v6q0 .425.288.713T6 15Zm-2 5q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm0-2h16V6H4v12Zm0 0V6v12Z"/></svg>
   </button>
 
-  <header id="h">
+  <header id="header">
     <h1>CSS RESET</h1>
   </header>
 
@@ -22,7 +27,7 @@
     <ul class="primary-navigation" id="ul">
     
       <li>
-        <a href="#h">Dark Mode</a>
+        <a href="#header">Dark Mode</a>
       </li>
     
       <li>
@@ -68,10 +73,11 @@
     <div class="wrapper flex">
 
       <section id="1">
-        <h1>Adding dark mode</h1>
+        <h1>HTML</h1>
         <code class="flex">
           <span><span class="class">html</span> <span class="curly-bracket ">{</span></span>
           <span class="property"><span class="property-name">color-scheme</span>: dark light; <span class="comment">/* Adds a default dark mode to your website */</span></span>
+          <span class="property"><span class="property-name">scroll-behavior</span>: smooth;</span>
           <span class="curly-bracket">}</span>
         </code>
       </section>
@@ -80,9 +86,7 @@
         <h1>Custom Properties</h1>
         <code class="flex">
           <span class="class">:root <span class="curly-bracket">{</span></span>
-          <span class="comment" style="padding-left: 1em">
-            /* Your custom properties */
-          </span>
+          <span class="comment" style="padding-left: 1em">/* Your custom properties */</span>
           <span class="curly-bracket">}</span>
         </code>
       </section>
@@ -118,7 +122,7 @@
       </section>
       
       <section id="6">
-        <h1>Responsive image and videos</h1>
+        <h1>Responsive Media</h1>
         <code class="flex">
             <span class="class">img,</span>
             <span class="class">picture,</span>
@@ -145,7 +149,6 @@
           <span class="class">body <span class="curly-bracket">{</span></span>
             <span class="property"><span class="property-name">min-height</span>: <span class="property-value">100dvh, 100vh</span></span>
             <span class="property"><span class="property-name">font-family</span>: "Poppins", sans-serif</span>
-            <span class="property"><span class="property-name">scroll-behavior</span>: smooth;</span>
             <span class="curly-bracket">}</span>
         </code>
       </section>
