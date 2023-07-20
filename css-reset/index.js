@@ -118,26 +118,16 @@ ul {
   inset: 0;
 }
 
-`
-
-console.log(copyButton.getAttribute("data-copied"))
-console.log(navbar.getAttribute("data-visible"))
-console.log(navbar)
-console.log(copyButton)
+`;
 
 copyButton.addEventListener("click", () => {
   copyText();
-  console.log('hello')
 })
 
 function copyText() {
-  if(copyButton.getAttribute("data-copied") === "false") {
     navigator.clipboard.writeText(text);
     copyButton.setAttribute("data-copied", true);
-  } else if(copyButton.getAttribute("data-copied") === "false") {
-    navigator.clipboard.writeText(text);
-    copyButton.setAttribute("data-copied", false);
-  }
+    setTimeout(() => {copyButton.setAttribute("data-copied", false)}, 2500);
 }
 
 toggleButton.addEventListener("click", () => {
@@ -148,21 +138,21 @@ toggleButton.addEventListener("click", () => {
     navbar.setAttribute("data-visible", false)
     toggleButton.setAttribute("aria-expanded", false)
   }
-})
+});
 
 header.addEventListener("click", () => {
   if(navbar.getAttribute("data-visible") === "true") {
     navbar.setAttribute("data-visible", false)
     toggleButton.setAttribute("aria-expanded", false)
   }
-})
+});
 
 mainContent.addEventListener("click", () => {
   if(navbar.getAttribute("data-visible") === "true") {
     navbar.setAttribute("data-visible", false)
     toggleButton.setAttribute("aria-expanded", false)
   }
-})
+});
 
 myList.addEventListener("click", () => {
   navbar.setAttribute("data-visible", false)

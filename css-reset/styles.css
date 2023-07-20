@@ -3,6 +3,7 @@
 html {
   color-scheme: dark light;
   scroll-behavior: smooth;
+  scroll-padding-top: max(3.5vh, 2rem);
 }
 
 :root {
@@ -24,7 +25,7 @@ html {
   --fs-code-heading: clamp(1.5rem, 5vw,4rem);
   --fs-snippet: clamp(1rem, 1.75vw, 1.25rem);
   --fs-navbar-mobile: clamp(0.9rem, 4vw, 1.75rem);
-  --fs-navbar: clamp(1.75rem, 2.5vw,2.75rem);
+  --fs-navbar: clamp(1.75rem, 3vw,2.75rem);
 
   --gap: ;
 
@@ -121,7 +122,7 @@ button {
   inset: 0;
 }
 
-/* *********************************************************************************** */
+/* ************************************** PROJECT SPECIFIC UTILITY CLASSES ********************************************* */
 
 .class,
 .curly-bracket,
@@ -171,7 +172,7 @@ body::after {
   content: '';
   position: absolute;
   aspect-ratio: 1;
-  height: clamp(15rem, 35vw, 25rem);
+  height: clamp(15rem, 35vw, 30rem);
   z-index: -1;
   filter: blur(4rem);
   background: rgb(255, 255, 255);
@@ -199,23 +200,39 @@ header > h1 {
 }
 
 .button {
-  --padding: .05rem .25rem;
+  --padding: .5rem .5rem;
 
   padding: var(--padding);
-  opacity: 0.3;
   inset: 0.5rem auto auto 0.5rem;
-  background: transparent;
+  background: hsla(0, 0%, 18%, 0.9);
   border: 0.15px  hsla(0, 0%, 100%, 0.5) solid;
   border-radius: 4px;
   z-index: 99999;
+  transition: all 0.15s ease-out;
+}
+
+.mobile-nav-toggle {
+  --padding: 0.5rem 0.75rem;
 }
 
 .copy {
-  --padding: 0.5rem 0.5rem;
-
-  opacity: 1;
   inset: 0.5rem 0.5rem auto auto;
 }
+
+.button:hover {
+  background: hsl(0 100% 0% / 0.9);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .button {
+    background: hsla(0, 0%, 61%, 0.1);
+    backdrop-filter: blur(1rem);
+  }
+  .button:hover {
+    background: hsl(0 100% 100% / 0.1)
+  }
+}
+
 
 .copy[data-copied = "true"] .page{
   display: none;
@@ -227,7 +244,7 @@ header > h1 {
 
 .copy[data-copied = "true"] .tick{
   display: block;
-  stroke: var(--bg-header);
+  stroke: hsl(240, 100%, 75%);
   stroke-width: 2px;
 }
 
@@ -251,19 +268,22 @@ header > h1 {
   font-size: var(--fs-navbar);
   background: hsl(0 100% 0% / 0.4);
 
+  z-index: 9998;
   transition: 
-  transform 0.25s ease-out,
-  inset 0.25s ease-out;
+    transform 0.25s ease-out,
+    inset 0.25s ease-out
+  ;
 }
 
 @media(min-width: 55rem) {
-  nav > ul > li {
+  nav > ul >  a > li {
     position: relative;
     cursor: pointer;
+    display: block;
     transition: transform 0.2s ease-out;
   }
   
-  nav  ul li::after {
+  nav ul a li::after {
     content: '';
     position: absolute;
     inset: 0 auto 0 -10%;
@@ -273,10 +293,26 @@ header > h1 {
     transform: scale(0.5);
     margin: auto;
     border-radius: 50%;
+    transition:
+      transform 0.2s ease-out,
+      opacity 0.1s ease-out
+    ;
   }
   
-  nav ul li:hover {
+  nav ul a li:hover {
     transform: translate(1.5rem);
+  }
+
+  nav ul a li:hover::after {
+    opacity: 0.6;
+    transform: scale(0.8) translate(-1.5rem);
+  }
+
+  code:hover {
+    scale: 1.004;
+    box-shadow:
+      0px 0px 12px 6px hsla(0, 0%, 61%, 0.55);
+    ;
   }
 }
 
@@ -323,6 +359,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
+  border-radius: 0.5rem;
 }
 
 section > h1 {
@@ -345,6 +382,9 @@ code {
   font-size: var(--fs-snippet);
   font-family: var(--ff-code);
   padding: var(--padding);
+  border-radius: inherit;
+  transition: all 0.15s ease-out;
+/*   box-shadow: 0 0 0 0 hsla(0, 0%, 61%, 0.4);  /* For Desktop  */
 }
 
 section:last-child > code {
