@@ -25,7 +25,7 @@ html {
   --fs-code-heading: clamp(1.5rem, 5vw,4rem);
   --fs-snippet: clamp(1rem, 1.75vw, 1.25rem);
   --fs-navbar-mobile: clamp(0.9rem, 4vw, 1.75rem);
-  --fs-navbar: clamp(1.75rem, 3vw,2.75rem);
+  --fs-navbar: clamp(1.75rem, 3vw, 3rem);
 
   --gap: ;
 
@@ -200,10 +200,9 @@ header > h1 {
 }
 
 .button {
-  --padding: .5rem .5rem;
-
+  --padding: 0.5rem;
+  
   padding: var(--padding);
-  inset: 0.5rem auto auto 0.5rem;
   background: hsla(0, 0%, 18%, 0.9);
   border: 0.15px  hsla(0, 0%, 100%, 0.5) solid;
   border-radius: 4px;
@@ -212,7 +211,7 @@ header > h1 {
 }
 
 .mobile-nav-toggle {
-  --padding: 0.5rem 0.75rem;
+  inset: 0.5rem auto auto 0.5rem;
 }
 
 .copy {
@@ -254,7 +253,6 @@ header > h1 {
 
 
 .navbar {
-
   --padding: min(15vh, 10rem) 0em 0 0.5em;
 
   position: fixed;
@@ -322,6 +320,10 @@ header > h1 {
 
     font-size: var(--fs-navbar-mobile);
     inset: 0 40% 0 0;
+  }
+
+  .button {
+    --padding: clamp(.05rem, 0.9vw, .5rem);
   }
 }
 
