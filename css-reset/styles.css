@@ -21,8 +21,10 @@ html {
   --ff-rest: Poppins, sans-serif;
 
   --fs-header: clamp(4rem, 16vw, 8rem);
-  --fs-code-heading: clamp(1.75rem, 2.5vw,2.75rem);;
+  --fs-code-heading: clamp(1.5rem, 5vw,4rem);
   --fs-snippet: clamp(1rem, 1.75vw, 1.25rem);
+  --fs-navbar-mobile: clamp(0.9rem, 4vw, 1.75rem);
+  --fs-navbar: clamp(1.75rem, 2.5vw,2.75rem);
 
   --gap: ;
 
@@ -208,19 +210,9 @@ header > h1 {
   z-index: 99999;
 }
 
-@media(height >= 600px) {
-  .navbar {
-    --padding: min(15vh, 10rem) 1em 0 1em;
-  }
-}
-
-@media (height < 600px) {
-  .navbar {
-    --paddding: min(10vh, 5rem) 1em 0 1em;
-  }
-}
-
 .navbar {
+
+  --padding: min(15vh, 10rem) 0em 0 0.5em;
 
   position: fixed;
   inset: 0 60% 0 0;
@@ -230,10 +222,21 @@ header > h1 {
   justify-content: center;
 
   padding: var(--padding);
-  font-size: var(--fs-code-heading);
+  font-size: var(--fs-navbar);
   background: hsl(0 100% 0% / 0.4);
 
-  transition: transform 0.25s ease-out;
+  transition: 
+  transform 0.25s ease-out,
+  inset 0.25s ease-out;
+}
+
+@media (max-width: 48rem) {
+  .navbar {
+    --padding: min(10vw, 5rem) 0 0.5rem;
+
+    font-size: var(--fs-navbar-mobile);
+    inset: 0 40% 0 0;
+  }
 }
 
 @supports (backdrop-filter: blur(1rem)) {
