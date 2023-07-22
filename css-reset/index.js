@@ -3,7 +3,8 @@ const navbar = document.getElementById("navbar");
 const myList = document.getElementById("ul");
 const mainContent = document.getElementById("main");
 const copyButton = document.getElementById("copy");
-const header = document.getElementById("header")
+const header = document.getElementById("header");
+const blurSheet = document.getElementById("blurSheet")
 
 const text = `
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -120,41 +121,30 @@ ul {
 
 `;
 
-copyButton.addEventListener("click", () => {
-  copyText();
-})
+console.log(document.documentElement);
 
-function copyText() {
-    navigator.clipboard.writeText(text);
-    copyButton.setAttribute("data-copied", true);
-    setTimeout(() => {copyButton.setAttribute("data-copied", false)}, 2500);
-}
+copyButton.addEventListener("click", () => {
+  navigator.clipboard.writeText(text);
+  copyButton.setAttribute("data-copied", true);
+  setTimeout(() => {copyButton.setAttribute("data-copied", false)}, 2500);
+})
 
 toggleButton.addEventListener("click", () => {
   if(navbar.getAttribute("data-visible") === "false") {
     navbar.setAttribute("data-visible", true)
+    blurSheet.setAttribute("data-turned-on", true);
     toggleButton.setAttribute("aria-expanded", true)
   } else if(navbar.getAttribute("data-visible") === "true") {
     navbar.setAttribute("data-visible", false)
+    blurSheet.setAttribute("data-turned-on", false);
     toggleButton.setAttribute("aria-expanded", false)
   }
 });
 
-header.addEventListener("click", () => {
+blurSheet.addEventListener("click", () => {
   if(navbar.getAttribute("data-visible") === "true") {
     navbar.setAttribute("data-visible", false)
     toggleButton.setAttribute("aria-expanded", false)
+    blurSheet.setAttribute("data-turned-on", false)
   }
-});
-
-mainContent.addEventListener("click", () => {
-  if(navbar.getAttribute("data-visible") === "true") {
-    navbar.setAttribute("data-visible", false)
-    toggleButton.setAttribute("aria-expanded", false)
-  }
-});
-
-myList.addEventListener("click", () => {
-  navbar.setAttribute("data-visible", false)
-  toggleButton.setAttribute("aria-expanded", false)
-});
+})
