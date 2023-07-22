@@ -295,19 +295,18 @@ h1 {
     transition: transform 0.2s ease-out;
   }
 
-  nav ul a {
-    position: relative;
+  nav ul a li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    align-items: center;
   }
   
-  nav ul a::after {
-    content: '';
-    position: absolute;
-    inset: 0 auto 0 -10%;
+  nav ul a li .circle {
     background: white;
     height: var(--fs-navbar);
     aspect-ratio: 1;
     transform: scale(0.5);
-    margin: auto;
     border-radius: 50%;
     transition:
       transform 0.2s ease-out,
@@ -316,12 +315,12 @@ h1 {
   }
   
   nav ul a:hover {
-    transform: translate(1.5rem);
+    transform: translate(0.7em);
   }
 
-  a:hover::after {
+  nav ul a:hover .circle {
     opacity: 0.5;
-    transform: scale(0.8) translate(-1.5rem);
+    transform: scale(0.9) translate(-0.7em);
   }
 }
 

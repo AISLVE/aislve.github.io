@@ -121,8 +121,6 @@ ul {
 
 `;
 
-console.log(document.documentElement);
-
 copyButton.addEventListener("click", () => {
   navigator.clipboard.writeText(text);
   copyButton.setAttribute("data-copied", true);
@@ -131,15 +129,21 @@ copyButton.addEventListener("click", () => {
 
 toggleButton.addEventListener("click", () => {
   if(navbar.getAttribute("data-visible") === "false") {
-    navbar.setAttribute("data-visible", true)
+    navbar.setAttribute("data-visible", true);
+    toggleButton.setAttribute("aria-expanded", true);
     blurSheet.setAttribute("data-turned-on", true);
-    toggleButton.setAttribute("aria-expanded", true)
   } else if(navbar.getAttribute("data-visible") === "true") {
-    navbar.setAttribute("data-visible", false)
+    navbar.setAttribute("data-visible", false);
+    toggleButton.setAttribute("aria-expanded", false);
     blurSheet.setAttribute("data-turned-on", false);
-    toggleButton.setAttribute("aria-expanded", false)
   }
 });
+
+myList.addEventListener("click", () => {
+  navbar.setAttribute("data-visible", false)
+  toggleButton.setAttribute("aria-expanded", false)
+  blurSheet.setAttribute("data-turned-on", false)
+})
 
 blurSheet.addEventListener("click", () => {
   if(navbar.getAttribute("data-visible") === "true") {
